@@ -1,0 +1,23 @@
+@use './utils/variables' as *;
+
+.hub-api-field {
+  align-items: center;
+  column-gap: $grid_gap;
+  display: grid;
+  grid-auto-rows: auto;
+  width: 100%;
+
+  .container.valid { display: none; }
+
+  &.count-1 {
+    grid-template-columns: [collection] 120px [preview] auto;
+  }
+
+  &.count-2 {
+    grid-template-columns: [collection] 120px [id] 100px [preview] auto;
+  }
+
+  &.count-3 {
+    grid-template-columns: [collection] 120px [id] 100px [subcollection] 145px [preview] auto;
+  }
+}
