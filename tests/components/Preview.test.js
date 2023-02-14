@@ -453,7 +453,7 @@ describe('Preview', () => {
 
       const props = getProps({
         data: {
-          type: 'faculty_expert_topic',
+          type: 'faculty_expert_topics',
           name: 'faculty expert topic'
         },
         loading: false
@@ -462,7 +462,7 @@ describe('Preview', () => {
       render(<Preview {...props} />);
 
       expect(screen.getByTestId('icon')).toHaveAttribute('class', 'icon valid');
-      expect(screen.getByTestId('object')).toHaveAttribute('class', 'object faculty_expert_topic');
+      expect(screen.getByTestId('object')).toHaveAttribute('class', 'object faculty_expert_topics');
 
       expect(screen.getByTestId('text')).toHaveTextContent('faculty expert topic');
 

@@ -16,7 +16,7 @@ export default {
   event: Event,
   event_category: Term,
   faculty_expert: Person,
-  faculty_expert_topic: Term,
+  faculty_expert_topics: Term,
   gallery: Gallery,
   gazette_article: Article,
   issue: Issue,
