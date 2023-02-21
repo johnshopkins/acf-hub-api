@@ -12,8 +12,6 @@ const Preview = ({ data, initialized, loading }) => {
     return <Icon name={'loading'} message={'Validating...'} />;
   }
 
-  console.log(data)
-
   if (data) {
 
     if (data.error) {
