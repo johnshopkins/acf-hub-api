@@ -188,6 +188,9 @@ class HubAPIField extends \acf_field
       }
     }
 
+    // add ACF (for cloned field index replacement)
+    $assets['dependencies'][] = 'acf';
+
     $path = plugin_dir_url(dirname(__DIR__)) . 'build';
 
     wp_register_script('fetch-jsonp', $path . '/fetch-jsonp.js');

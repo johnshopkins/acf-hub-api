@@ -17,6 +17,15 @@ import HubApiForm from './js/components/HubApiForm';
 
     script.remove();
 
+    // replace acfcloneindex with uniqueid. ACF takes care of this in their
+    // JS (/assets/js/acf.js#L1478-L1481), but we need to manually do it manually.
+    const replace = acf.uniqid('acf');
+    data.fields = data.fields.map(value => {
+      value.props.id = value.props.id.replace('acfcloneindex', replace);
+      value.props.name = value.props.name.replace('acfcloneindex', replace);
+      return value;
+    });
+
     render(createElement(HubApiForm, data), domObject);
   };
 
