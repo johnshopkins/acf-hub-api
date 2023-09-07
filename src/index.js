@@ -1,4 +1,4 @@
-import { createElement, render } from '@wordpress/element';
+import { createElement, createRoot } from '@wordpress/element';
 
 import HubApiForm from './js/components/HubApiForm';
 
@@ -26,7 +26,8 @@ import HubApiForm from './js/components/HubApiForm';
       return value;
     });
 
-    render(createElement(HubApiForm, data), domObject);
+    const root = createRoot(domObject);
+    root.render(createElement(HubApiForm, data));
   };
 
   acf.add_action('ready_field/type=hubapi_content_picker', createHubApiFormField);
