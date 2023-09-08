@@ -5,8 +5,6 @@ import InvalidIcon from '../icons/invalid';
 import LoadingIcon from '../icons/loading';
 import ValidIcon from '../icons/valid';
 
-import '../../css/icons.scss';
-
 const IconComponents = {
   loading: LoadingIcon,
   invalid: InvalidIcon,

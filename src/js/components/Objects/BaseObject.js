@@ -17,7 +17,11 @@ class BaseObject extends Component {
     const thumbnameFieldName = this.getThumbnailFieldName();
 
     if (this.props.data._embedded && typeof this.props.data._embedded[thumbnameFieldName] !== 'undefined' && this.props.data._embedded[thumbnameFieldName] !== null) {
-      return <Thumbnail thumbnail={this.props.data._embedded[thumbnameFieldName][0]} />
+      return (
+        <div className={'img-container'}>
+          <Thumbnail thumbnail={this.props.data._embedded[thumbnameFieldName][0]} />
+        </div>
+      )
     }
 
     return false;
@@ -39,9 +43,9 @@ class BaseObject extends Component {
 
     const classes = ['object', this.props.data.type];
 
-    if (this.thumbnail) {
-      classes.push('has-image');
-    }
+    // if (this.thumbnail) {
+    //   classes.push('has-image');
+    // }
 
     return classes.join(' ');
   }
