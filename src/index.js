@@ -15,14 +15,17 @@ import HubApiForm from './js/components/HubApiForm';
     const script = domObject.querySelector('script');
     const data = JSON.parse(domObject.querySelector('script').innerHTML);
 
+    // grab the ID ACF designated for this duplication
+    const replaceWith = script.getAttribute('id');
+
     script.remove();
 
-    // replace acfcloneindex with uniqueid. ACF takes care of this in their
-    // JS (/assets/js/acf.js#L1478-L1481), but we need to manually do it manually.
-    const replace = acf.uniqid('acf');
+    // replace acfcloneindex with uniqueid. ACF takes care of this in
+    // their acf.js, but we need to manually do it manually. ACF ref:
+    // https://github.com/johnshopkins/acf-pro/blob/master/assets/build/js/acf.js#L3294-L3297
     data.fields = data.fields.map(value => {
-      value.props.id = value.props.id.replace('acfcloneindex', replace);
-      value.props.name = value.props.name.replace('acfcloneindex', replace);
+      value.props.id = value.props.id.replace('acfcloneindex', replaceWith);
+      value.props.name = value.props.name.replace('acfcloneindex', replaceWith);
       return value;
     });
 
