@@ -97,7 +97,7 @@ class HubAPIField extends \acf_field
     ];
 
     echo '<div class="hub-api-field count-'. count($field['endpoint_parts']) .'">';
-    echo '<script type="application/json">'. wp_json_encode($data) .'</script>';
+    echo '<script type="application/json" id="acfcloneindex">'. wp_json_encode($data) .'</script>';
     echo '</div>';
   }
 

@@ -4,8 +4,6 @@ import PropTypes from 'prop-types';
 import Icon from './Icon';
 import ObjectComponents from './Objects';
 
-import '../../css/preview.scss';
-
 const Preview = ({ data, initialized, loading }) => {
 
   if (loading) {
