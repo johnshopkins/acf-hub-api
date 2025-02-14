@@ -2,7 +2,7 @@
     "name": "johnshopkins/acf-hub-api",
     "description": "Advanced Custom field that enables users to select content from the Hub API",
     "homepage": "https://github.com/johnshopkins/acf-hub-api",
-    "version": "1.0.4",
+    "version": "1.1.0",
     "license": "GPL-2.0-or-later",
     "type": "wordpress-plugin",
     "authors": [
