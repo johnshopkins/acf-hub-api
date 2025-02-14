@@ -6,6 +6,7 @@ import Issue from './Issue';
 import Person from './Person';
 import Promo from './Promo';
 import Term from './Term';
+import Video from './Video';
 
 export default {
   announcement: Announcement,
@@ -28,4 +29,5 @@ export default {
   summary: Article,
   tag: Term,
   topic: Term,
+  remotely_hosted_video: Video,
 };

@@ -1,4 +1,5 @@
 import fetchJSONP from 'fetch-jsonp';
+import env from './env';
 import getEndpoint from './includes/getEndpoint';
 import getParams from './includes/getParams';
 
@@ -20,7 +21,8 @@ export default class API {
       return
     }
 
-    const url = 'https://api.hub.jhu.edu/' + endpoint +  '?' + this.getParams(parts, allowPreview, this.auth);
+    const prefix = env === 'production' ? '' : `${env}.`;
+    const url = `https://${prefix}api.hub.jhu.edu/${endpoint}?` + this.getParams(parts, allowPreview, this.auth);
 
     if (this.useFetch) {
       fetch(url)

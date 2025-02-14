@@ -23,6 +23,7 @@ class HubAPIField extends \acf_field
     'promos' => 'promos',
     'tags' => 'tags',
     'topics' => 'topics',
+    'videos' => 'videos',
   ];
 
   public function __construct()
