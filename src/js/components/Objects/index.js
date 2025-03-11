@@ -11,6 +11,7 @@ import Video from './Video';
 export default {
   announcement: Announcement,
   article: Article,
+  campaign: Term,
   channel: Term,
   department: Term,
   division: Term,
