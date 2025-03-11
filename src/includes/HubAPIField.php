@@ -10,6 +10,7 @@ class HubAPIField extends \acf_field
     'announcements' => 'announcements',
     'announcement_categories' => 'announcement categories',
     'articles' => 'articles',
+    'campaigns' => 'campaigns',
     'channels' => 'channels',
     'departments' => 'departments',
     'divisions' => 'divisions',
